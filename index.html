@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Area Calculator</title>
+</head>
+
+<body>
+    <script>
+        function divide() {
+            var result = document.getElementById("result1");
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            result.innerHTML = Number(num1) / Number(num2);
+        }
+    </script>
+    <script>
+        function multiply() {
+            var result = document.getElementById("result2");
+            var num3 = document.getElementById("num3").value;
+            var num4 = document.getElementById("num4").value;
+            result.innerHTML = Number(num3) * Number(num4);
+        }
+    </script>
+    </head>
+
+    <body>
+
+        <h1>Area of the Triangle</h1>
+        <p id="area"></p>
+
+        <script>
+            function Area(a, b, c) {
+                var s = (a + b + c) / 2;
+                var area = Math.sqrt((s * (s - a) * (s - b) * (s - c)));
+                return area;
+            }
+
+
+            var A = 5;
+            var B = 6;
+            var C = 7;
+
+            const result = Area(A, B, C)
+
+            document.getElementById('area').innerText = result;
+        </script>
+
+
+
+        <form>
+            <input type="text" id="num1">
+            <input type="text" id="num2">
+            <button type="button" onclick="divide()">devide</button>
+            <p id="result1"></p>
+        </form>
+        <form>
+            <input type="text" id="num3">
+            <input type="text" id="num4">
+            <button type="button" onclick="multiply()">Multiply</button>
+            <p id="result2"></p>
+        </form>
+
+
+
+
+        <h1 id="output"></h1>
+
+        <script>
+            let givenString = " is a programming language.";
+
+            let newString = "JavaScript" + givenString;
+
+            document.getElementById("output").innerText = newString;
+        </script>
+
+
+    </body>
+
+</html>
